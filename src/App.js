@@ -5,18 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <input type="text" tabIndex={-1}/>
+        <p contentEditable={true}>(Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cupiditate debitis dolores eligendi exercitationem incidunt quaerat quos unde ut! Accusamus distinctio harum laborum nobis non omnis quaerat quam recusandae sunt.</p>
       </header>
     </div>
   );
