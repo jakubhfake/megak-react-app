@@ -3,13 +3,13 @@ import './App.css';
 
 function App() {
   return (
-
+    <>
       <header className="App-header">
           <input type="text" tabIndex={-1}/>
-        <p contentEditable={true}>(Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cupiditate debitis dolores eligendi exercitationem incidunt quaerat quos unde ut! Accusamus distinctio harum laborum nobis non omnis quaerat quam recusandae sunt.</p>
+        <p contentEditable={true}>Za pomocą nawiasów klamrowych, do JSX można przekazać wyrażenie JS.</p>
       </header>
-            <p>Czytaj będy React</p>
-
+            <p>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. {2+3} daje man 5.</p>
+    </>
   );
 }
 
