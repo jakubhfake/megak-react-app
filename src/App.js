@@ -3,11 +3,8 @@ import './App.css';
 
 function checkName() {
     const name = prompt('Podaj imię.');
-    if (name === 'Kuba') {
-        return 'BAN!';
-    } else {
-        return name;
-    }
+
+    return name === 'Kuba' ? 'BAN!' : name;
 }
 
 function App() {
