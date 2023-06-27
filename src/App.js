@@ -13,7 +13,7 @@ function App() {
     <>
       <header className="App-header">
           <input type="text" tabIndex={-1}/>
-          <p className={person.firstName}>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. Witamy rodzinę {person.lastName}: {guests.join(', ')}</p>
+          {/*<p className={person.firstName}>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. Witamy rodzinę {person.lastName}: {guests.join(', ')}</p>*/}
       </header>
 
     </>
