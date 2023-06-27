@@ -5,12 +5,10 @@ import "./App";
 import {App} from "./App";
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <>
-        <App/>
-        <App/>
-        <App/>
-    </>
-);
+let counter = 0;
+
+setInterval(() => {
+    counter++;
+    console.log(`Hello, World! ${counter}`)
+}, 1000);
 
