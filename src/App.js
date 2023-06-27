@@ -12,9 +12,9 @@ function App() {
     <>
       <header className="App-header">
           <input type="text" tabIndex={-1}/>
-        <p contentEditable={true}>Za pomocą nawiasów klamrowych, do JSX można przekazać wyrażenie JS.</p>
+          <p>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. {checkName()}.</p>
       </header>
-            <p>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. {2+3} daje man 5.</p>
+
     </>
   );
 }
