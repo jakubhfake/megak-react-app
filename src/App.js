@@ -3,7 +3,7 @@ import './App.css';
 
 function checkName(name) {
 
-    return name === 'Kuba' ? 'BAN!' : name;
+    return name === 'Kuba' ? <strong>'BAN!'</strong> : name;
 }
 
 function App() {
