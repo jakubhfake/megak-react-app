@@ -11,7 +11,11 @@ let counter = 0;
 setInterval(() => {
     counter++;
     render(
-        <h1>Licznik ma już {counter}.</h1>,
+        <>
+            <h1>Licznik ma już {counter}.</h1>,
+            <hr/>
+            <h5>Witamy serdecznie!!!!</h5>
+        </>,
         document.getElementById('root'),
 );
 }, 1000);
