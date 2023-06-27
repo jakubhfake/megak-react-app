@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function checkName() {
-    const name = prompt('Podaj imię.');
+function checkName(name) {
 
     return name === 'Kuba' ? 'BAN!' : name;
 }
@@ -12,7 +11,7 @@ function App() {
     <>
       <header className="App-header">
           <input type="text" tabIndex={-1}/>
-          <p>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. {checkName()}.</p>
+          <p>W nawiasy klamrowe możemy dodać dowolne wyrażenie JS, które coś zwraca np. {checkName('Kuba')}, {checkName('Jakubek')}.</p>
       </header>
 
     </>
