@@ -8,9 +8,9 @@ import {render} from 'react-dom';
 const name = prompt('Podaj imię');
 
 render(
-    name === ''
-        ? <strong>Brak imienia</strong>
-        : <h1>{name}</h1>,
+    <div>
+        {name === '' ? <strong>Brak imienia</strong> : <h1>{name}</h1>}
+    </div>,
     document.getElementById('root'),
 );
 
