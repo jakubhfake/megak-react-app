@@ -3,7 +3,11 @@ import {App} from "./App";
 import {render} from 'react-dom';
 
 render(
-    <App/>,
+    <>
+        <App name="Testowa Osoba"/>
+        <App name="Lord Vader"/>
+        <App name="Jakub"/>
+    </>,
     document.getElementById('root'),
 );
 
