@@ -8,17 +8,18 @@ import {render} from 'react-dom';
 
 const name = prompt('Podaj imię');
 
+let element;
+
 if (name === '') {
-    render(
-        <strong>Brak imienia</strong>,
-        document.getElementById('root'),
-    );
+    element = <strong>Brak imienia</strong>;
 } else {
-    render(
-        <h1>{name}</h1>,
-    document.getElementById('root'),
-    )
+    element = <h1>{name}</h1>;
 }
+
+render(
+    element,
+    document.getElementById('root'),
+);
 
 
 
