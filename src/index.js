@@ -5,15 +5,12 @@ import "./App";
 import {App} from "./App";
 import {render} from 'react-dom';
 
-
 const name = prompt('Podaj imię');
 
-const element = name === ''
-    ? <strong>Brak imienia</strong>
-    : <h1>{name}</h1>;
-
 render(
-    element,
+    name === ''
+        ? <strong>Brak imienia</strong>
+        : <h1>{name}</h1>,
     document.getElementById('root'),
 );
 
