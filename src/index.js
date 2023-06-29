@@ -6,17 +6,19 @@ import {App} from "./App";
 import {render} from 'react-dom';
 
 
-let counter = 0;
+const name = prompt('Podaj imię');
 
-setInterval(() => {
-    counter++;
+if (name === '') {
     render(
-        <>
-            <h1>Licznik ma już {counter}.</h1>,
-            <hr/>
-            <h5>Witamy serdecznie!!!!</h5>
-        </>,
+        <strong>Brak imienia</strong>,
         document.getElementById('root'),
-);
-}, 1000);
+    );
+} else {
+    render(
+        <h1>{name}</h1>,
+    document.getElementById('root'),
+    )
+}
+
+
 
