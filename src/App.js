@@ -3,7 +3,7 @@ import './App.css';
 
     const guests = ['Julia', 'Jan', 'Julian', 'Jakub', 'Joanna'];
 
-export function App() {
+export const App = () => {
     const person = {
         firstName: 'Jakub',
         lastName:  'Haliniak',
@@ -18,5 +18,5 @@ export function App() {
 
     </>
   );
-}
+};
 
