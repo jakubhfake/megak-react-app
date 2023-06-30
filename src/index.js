@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 
 render(
     <>
-        <App name="Testowa Osoba"/>
+        <App name="Testowa Osoba" lastName="Nazwisko"/>
         <App name="Lord Vader"/>
         <App name="Jakub"/>
     </>,
