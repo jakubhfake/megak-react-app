@@ -2,18 +2,24 @@ import React from 'react';
 import {App} from "./App";
 import {render} from 'react-dom';
 
-const person = {
-    name: 'Baltazar',
-    lastName: 'Gąbka',
-    age: 123,
-};
 
 render(
-    <>
+    <React.StrictMode>
         <App
-            person={person}
+            person={{
+                name: 'Baltazar',
+                lastName: 'Gąbka',
+                age: 123,
+            }}
         />
-    </>,
+        <App
+            person={{
+                name: 'Jasio',
+                lastName: 'Fasola',
+                age: 123,
+            }}
+        />
+    </React.StrictMode>,
     document.getElementById('root'),
 );
 
