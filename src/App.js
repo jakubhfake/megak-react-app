@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import './App.css';
 
 export const App = (props) => {
-    const {name, lastName, friends} = props
+    const {person} = props
     return (
         <>
             <h1>Hello, World!</h1>
-            <p>Hello from {name} {lastName} do you have a friends:  {friends}</p>
+            <p>Hello from {person.name} {person.lastName}.</p>
         </>
     );
 }
