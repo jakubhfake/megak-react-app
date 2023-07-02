@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import './App.css';
 
 export const Participant = (props) => {
-    return;
+
+    return(
+        <p>{props.list
+            .map(person => person.name)
+            .join(', ')}</p>
+    );
 }
 
