@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 
 export const Participant = (props) => {
+    const names = props.list
+        .map(person => person.name)
+        .join(', ');
 
-    return(
-        <p>{props.list
-            .map(person => person.name)
-            .join(', ')}</p>
-    );
+    return <p>{names}</p>;
 }
 
