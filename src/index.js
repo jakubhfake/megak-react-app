@@ -1,23 +1,21 @@
 import React from 'react';
-import {App} from "./App";
+import {Participant} from "./Participant";
 import {render} from 'react-dom';
 
 
 render(
     <React.StrictMode>
-        <App
-            person={{
-                name: 'Baltazar',
-                lastName: 'Gąbka',
-                age: 123,
-            }}
-        />
-        <App
-            person={{
-                name: 'Jasio',
-                lastName: 'Fasola',
-                age: 123,
-            }}
+        <Participant
+            nameList={[
+                {
+                    name: 'Anna',
+                    mail: 'xyz@xyz.xyz'
+                },
+                {
+                    name: 'Jan',
+                    mail: 'abc@abc.abc'
+                }
+            ]}
         />
     </React.StrictMode>,
     document.getElementById('root'),
