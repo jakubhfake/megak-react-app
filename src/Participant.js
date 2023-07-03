@@ -5,6 +5,10 @@ export const Participant = (props) => {
         .map(person => person.name)
         .join(', ');
 
-    return <p>{names}</p>;
+    return <>
+        <p>{names}</p>
+        <p>Razem: {props.list.length} rekordów.</p>
+    </>;
+    
 }
 
