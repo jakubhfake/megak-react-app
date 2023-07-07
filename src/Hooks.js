@@ -7,14 +7,14 @@ export class Hooks extends Component {
     };
 
     render() {
-
+        const {name} = this.state;
         setTimeout(() => {
             this.setState({
                 name: 'XXX',
             })
         }, 2500);
 
-        return <h1>{this.state.name}</h1>;
+        return <h1>{name}</h1>;
     }
 }
 
