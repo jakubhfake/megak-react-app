@@ -1,14 +1,20 @@
-import React, {useState} from 'react';
+import React, {Component, useState} from 'react';
 
-export const Hooks = (props) => {
-    // const [nazwa, setNazwa] = useState(domyślna wartość);
+export class Hooks extends Component {
+    state = {
+        name: 'Foo',
+        email: 'xxx@yyy.zzz',
+    };
 
-    const [name, setName] = useState('Foo');
+    render() {
 
-    setTimeout( () => {
-        setName('Bar')}, 2500);
+        setTimeout(() => {
+            this.setState({
+                name: 'XXX',
+            })
+        }, 2500);
 
-
-    return <h1>{name}</h1>;
+        return <h1>{this.state.name}</h1>;
+    }
 }
 
