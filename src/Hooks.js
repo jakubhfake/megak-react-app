@@ -10,8 +10,9 @@ export const Hooks = (props) => {
 
     setTimeout( () => {
         setPerson(person => {
-            person.name = 'Jakub';
-            return person;
+            const personCopy = JSON.parse(JSON.stringify(person));
+            personCopy.name = 'Jakub';
+            return personCopy;
         //     jest to zmiana obiektu przez referencje, a ny nie możemy zmieniać stanu wyjściowego!
         })
     }, 2500);
