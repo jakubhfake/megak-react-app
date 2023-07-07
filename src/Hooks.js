@@ -2,12 +2,21 @@ import React, {useState} from 'react';
 
 export const Hooks = (props) => {
     // const [nazwa, setNazwa] = useState(domyślna wartość);
-    const [count,setCount] = useState(0);
-    setInterval( () => {
-        setCount(count => count + 1);
 
-    }, 1000);
+    const [person, setPerson] = useState({
+        name: 'Ciekawe jakieś imię',
+        lastName: 'Kowalski jak zwykle',
+    });
 
-    return <h1>{count}</h1>;
+    setTimeout( () => {
+        setPerson(person => {
+            person.name = 'Jakub';
+            return person;
+        //     jest to zmiana obiektu przez referencje, a ny nie możemy zmieniać stanu wyjściowego!
+        })
+    }, 2500);
+
+
+    return <h1>{person.name}</h1>;
 }
 
