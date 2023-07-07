@@ -7,7 +7,7 @@ export const Hooks = (props) => {
         setCount(5)
     }, 5000);
 
-    return count >= 4 ?
+    return count >= 7 ?
         <p>Poprawne jest to że nasza liczba {count} jest >= 4</p>
         : <h1>{count} jest większe lub równe 4, sprawdź czy mamy rację!</h1>;
 }
