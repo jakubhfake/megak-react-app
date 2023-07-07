@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {StringList} from "./StringList";
+import {RecordCount} from "./RecordsCount";
 
 export const Participant = (props) => {
     const names = props.list
-        .map(person => person.name)
-        .join(', ');
+        .map(person => person.name);
 
     return <>
-        <p>{names}</p>
-        <p>Razem: {props.list.length} rekordów.</p>
+        <StringList list={names}/>
+        <RecordCount count={names.length}/>
     </>;
     
 }
