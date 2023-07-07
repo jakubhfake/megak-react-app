@@ -9,7 +9,7 @@ export const Hooks = (props) => {
 
     return <>
         <h1>Zabawa hook'ami</h1>
-        {count}
+        <p>Liczymy do {count}</p>
     </>;
 }
 
