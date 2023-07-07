@@ -1,16 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-export const StringList = (props) => {
-    //Copy of array
-    // You need to read about deep copying of object
-    const newArr = [...props.list, props.list.length];
+export const Hooks = (props) => {
+    // const [nazwa, setNazwa] = useState(domyślna wartość);
+    const [thingToDo,setThingToDo] = useState('koncentacja');
 
-
-
-    const string = newArr
-        .join(', ');
-
-    return <p>{string}</p>;
-
+    return <>
+        <h1>Zabawa hook'ami</h1>
+        {thingToDo}
+    </>;
 }
 
