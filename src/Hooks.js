@@ -11,6 +11,14 @@ export class Hooks extends Component {
         console.log('Pierwszametoda, zamontowanie komponentu w DOM')
     }
 
+    componentWillUnmount() {
+        console.log('Odmontowywanie komponentu');
+    }
+
+    componentDidUpdate() {
+        console.log('Ponownie wyrenderowano komponent');
+    }
+
     render() {
         const {name} = this.state;
         setTimeout(() => {
