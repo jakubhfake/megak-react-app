@@ -1,16 +1,19 @@
 import React from 'react';
 import {Participant} from "./Participant";
-import {render} from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {participantData} from "./data/participant";
 
-render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
     <React.StrictMode>
         <Participant
             list={participantData}
         />
     </React.StrictMode>,
-    document.getElementById('root'),
 );
+
 
 
 
