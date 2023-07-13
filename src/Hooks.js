@@ -8,24 +8,27 @@ export class Hooks extends Component {
     };
 
     componentDidMount() {
-        console.log('Pierwszametoda, zamontowanie komponentu w DOM')
-    }
+        console.log('Pierwsza metoda, zamontowanie komponentu w DOM');
 
-    componentWillUnmount() {
-        console.log('Odmontowywanie komponentu');
+        setTimeout(() => {
+            this.setState({
+                name: 'XXX',
+            })
+        }, 2500);
     }
 
     componentDidUpdate() {
         console.log('Ponownie wyrenderowano komponent');
     }
 
+    componentWillUnmount() {
+        console.log('Odmontowywanie komponentu');
+    }
+
     render() {
         const {name} = this.state;
-        setTimeout(() => {
-            this.setState({
-                name: 'XXX',
-            })
-        }, 2500);
+
+        console.log('Renderowanie...');
 
         return <h1>{name}</h1>;
     }
