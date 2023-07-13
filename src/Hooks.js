@@ -3,26 +3,21 @@ import React, {Component, useState} from 'react';
 export class Hooks extends Component {
     // Metody cyklu życia komponentu
     state = {
-        name: 'Foo',
-        email: 'xxx@yyy.zzz',
+        count: 0,
     };
 
     componentDidMount() {
         console.log('Pierwsza metoda, zamontowanie komponentu w DOM');
 
-        setTimeout(() => {
-            this.setState({
-                name: 'XXX',
-            })
-        }, 2500);
+        setInterval(() => {
+            this.setState(prev => ({
+                count: prev.count + 1,
+            }))
+        }, 1000);
     }
 
     componentDidUpdate() {
-        console.log('Ponownie wyrenderowano komponent');
-    }
-
-    componentWillUnmount() {
-        console.log('Odmontowywanie komponentu');
+        console.log('Aktualizacja ...');
     }
 
     render() {
