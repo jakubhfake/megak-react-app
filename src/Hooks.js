@@ -8,6 +8,7 @@ export class Hooks extends Component {
 
     componentDidMount(){
         // counter jest liczony co dwa i jak narazie nie wiem o co chodzi, gdzie jest błąd
+        // problemem w tym przypadku jest opakowanie komponenty APP w pliku index.je w <React.StrictMode>
         const {count} = this.state;
         console.log(`Pierwsza metoda, zamontowanie komponentu w DOM ${count}`);
 
