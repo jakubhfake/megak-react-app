@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export class Hooks extends Component {
+export class Counter extends Component {
     // Metody cyklu życia komponentu
     state = {
         count: 0,

@@ -1,7 +1,7 @@
 import React from 'react';
 import {StringList} from "./StringList";
 import {RecordCount} from "./RecordsCount";
-import {Hooks} from "./Hooks";
+import {Counter} from "./Counter";
 
 export const Participant = (props) => {
     const names = props.list
@@ -10,7 +10,7 @@ export const Participant = (props) => {
     return <>
         <StringList list={names}/>
         <RecordCount count={names.length}/>
-        <Hooks/>
+        <Counter/>
     </>;
     
 }
