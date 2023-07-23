@@ -12,8 +12,8 @@ export class Counter extends Component {
         const {count} = this.state;
         console.log(`Pierwsza metoda, zamontowanie komponentu w DOM ${count}`);
 
-        setInterval(() => {
-            this.setState(prev => ({
+        this.intervalId = setInterval(() => {
+           this.setState(prev => ({
                 count: prev.count + 1,
             }));
         }, 1000);
@@ -21,6 +21,11 @@ export class Counter extends Component {
 
     componentDidUpdate() {
         console.log(`Aktualizacja ... ${this.state.count}`);
+    }
+
+    componentWillUnmount() {
+        console.log(`Ohhh nooooooooooooooooo`);
+        clearInterval(this.intervalId);
     }
 
 
