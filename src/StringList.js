@@ -3,7 +3,7 @@ import React from 'react';
 export const StringList = (props) => {
     //Copy of array
     // You need to read about deep copying of object
-    const newArr = [...props.list, props.list.length];
+    const newArr = props.list
 
     const string = newArr
         .join(', ');
