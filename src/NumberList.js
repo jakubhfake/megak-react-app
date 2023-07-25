@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {StringList} from "./StringList";
 
+// TODO: spróbować dodać propsy do sterowania od jakiej cyfry zaczynamy i jakie jest opóźnienie w wyświetlaniu
 export class NumberList extends Component {
     state = {
         numbers: [1],
