@@ -1,17 +1,12 @@
-import React, {Component, useState} from 'react';
+import React from 'react';
 import './App.css';
-import {Counter} from "./Counter";
 import {ClockFun} from "./ClockFun";
+import {NumberList} from "./NumberList";
 
-export const App = props => {
-    const [show, setShow] = useState(true);
-
-    setTimeout(() => {
-        setShow(false);
-    }, 5000);
-
-    return show
-        ? <ClockFun/>
-        : null;
-};
+export const App = props => (
+    <>
+        <ClockFun/>
+        <NumberList/>
+    </>
+);
 
