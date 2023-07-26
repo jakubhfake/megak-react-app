@@ -8,7 +8,6 @@ export const NumberList = props => {
     useEffect(() => {
         const intervalID = setInterval(() => {
 
-            console.log('numbers', numbers);
             setNumbers(numbers => [...numbers, numbers.length + 1])
 
         }, 1000);
