@@ -8,6 +8,6 @@ export const ClockFun = props => {
             setDt(new Date());
         }, 1000);
     }, []);
-
+git
     return <p>{dt.toLocaleString()}</p>
 };
