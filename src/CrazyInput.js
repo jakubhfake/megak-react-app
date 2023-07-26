@@ -5,12 +5,12 @@ export const CrazyInput = props => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-
+            setInputType(inputType => (inputType === 'password' ? 'text' : 'password'))
         }, 1000);
 
         return () => clearInterval(intervalId);
     //     tu musi być funkcja a nie return clearInterval(intervalId), ponieważ po uruchomienufunkcji id razu się ona zakończy, czyli nie będzie działało :)
     }, []);
 
-    return <input type={props.isPwd ? 'password' : 'text'}/>
+    return <input type={inputType}/>
 }
