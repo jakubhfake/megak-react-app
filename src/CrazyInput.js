@@ -1,4 +1,4 @@
 import React from "react";
 export const CrazyInput = props => {
-    return <input type={props.type}/>
+    return <input type={props.isPwd ? 'password' : 'text'}/>
 }
