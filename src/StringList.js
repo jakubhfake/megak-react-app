@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 export const StringList = (props) => {
     //Copy of array
@@ -7,6 +7,10 @@ export const StringList = (props) => {
 
     const string = newArr
         .join(', ');
+
+    useEffect(() => {
+            console.log('Zmiania się lista!!!');
+    }, [props.list]);
 
     return <p>{string}</p>;
 

@@ -9,9 +9,5 @@ export const ClockFun = props => {
         }, 1000);
     }, []);
 
-    useEffect(() => {
-        console.log('Czas zmienił się o sekundę')
-    }, [dt]);
-
     return <p>{dt.toLocaleString()}</p>
 };
