@@ -3,11 +3,15 @@ export const ClockFun = props => {
     const [dt, setDt] = useState(new Date());
 
     useEffect(() => {
-        console.log('Tylko raz!!!!');
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             setDt(new Date());
         }, 1000);
+
+        return () => {
+            clearInterval(intervalId);
+            console.log('Pa pa!')
+        }
     }, []);
-git
+
     return <p>{dt.toLocaleString()}</p>
 };
