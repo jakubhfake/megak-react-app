@@ -6,7 +6,7 @@ export const LinkButton = props => {
       alert('Kicknięto mnie!');
     };
 
-    return (<a href={'https://www.43time.pl'}>
-        <button onClick={clicked}>43time link!</button>
-    </a>);
+    return (<form>
+        <button  formAction={'https://www.43time.pl'} onClick={clicked}>43time link!</button>
+    </form>);
 }

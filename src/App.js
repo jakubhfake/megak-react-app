@@ -4,6 +4,7 @@ import {ProgressBar} from "./ProgressBar";
 import {AnimatedProgressBar} from "./AnimatedProgressBar";
 import {Button} from "./Button";
 import {LinkButton} from "./LinkButton";
+import {SendForm} from "./SendForm";
 
 export const App = props => (
     <>
@@ -17,6 +18,7 @@ export const App = props => (
         <AnimatedProgressBar/>
         <Button></Button>
         <LinkButton/>
+        <SendForm/>
     </>
 );
 
