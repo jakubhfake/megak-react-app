@@ -4,7 +4,7 @@ export const CrazyInput = props => {
     const [backgroundColor, setBackgroundColor] = useState('yellow');
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+         const intervalId = setInterval(() => {
             setBackgroundColor(inputType => (backgroundColor === 'yellow' ? 'cadetblue' : 'yellow'))
             console.log('color is changing');
         }, 1000);
