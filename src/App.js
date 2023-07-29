@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {ProgressBar} from "./ProgressBar";
 import {AnimatedProgressBar} from "./AnimatedProgressBar";
+import {Button} from "./Button";
 
 export const App = props => (
     <>
@@ -13,6 +14,7 @@ export const App = props => (
         <ProgressBar percentage={75}/>
         <ProgressBar percentage={100}/>
         <AnimatedProgressBar/>
+        <Button></Button>
     </>
 );
 
