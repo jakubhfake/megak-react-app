@@ -1,7 +1,8 @@
 import React from 'react';
 
 export const Button = props => {
-    const clicked = () => {
+    const clicked = event => {
+        // event.preventDefault();
       alert('Kicknięto mnie!');
     };
 
