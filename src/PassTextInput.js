@@ -1,17 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 
 export const PassTextInput = prompt => {
+    const [inputType, setInputType] = useState('password');
 
+    const [icon, setIcon] = useState('👁‍🗨');
     const showPassword = () => {
-        console.log('Pokaż hasło');
+        setInputType('text');
+        setIcon('👁‍🗨');
     };
 
     const hidePassword = () => {
-        console.log('Hasło ukryte');
+        setInputType('password');
+        setIcon('👁')
     };
 
     return <>
-        <input type={'password'}/>
-        <button onMouseDown={showPassword} onMouseUp={hidePassword}>🗨👁‍🗨</button>
-        <button>🗨👁</button></>
+        <input type={inputType}/>
+        <button onMouseDown={showPassword} onMouseUp={hidePassword}>{icon}</button>
+        </>
 }
