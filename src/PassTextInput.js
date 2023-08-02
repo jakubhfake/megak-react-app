@@ -1,19 +1,19 @@
 import React, {useState} from "react";
 
 export const PassTextInput = prompt => {
-    const [inputType, setInputType] = useState('password');
-    const showPassword = () => {
-        setInputType('text');
+    const [isPreview, setPreview] = useState(false);
+    const showPreview = () => {
+        setPreview(true);
     };
 
-    const hidePassword = () => {
-        setInputType('password');
+    const hidePreview = () => {
+        setPreview(false);
     };
 
     return <>
-        <input type={inputType}/>
-        <button onMouseDown={showPassword} onMouseUp={hidePassword}>
-            {inputType === 'password' ? '👁' : '👁‍🗨'}
+        <input type={isPreview ? 'text' : 'password'}/>
+        <button onMouseDown={showPreview} onMouseUp={hidePreview}>
+            {isPreview === 'password' ? '👁' : '👁‍🗨'}
         </button>
         </>
 }
