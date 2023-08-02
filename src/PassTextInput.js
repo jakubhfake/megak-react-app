@@ -13,7 +13,7 @@ export const PassTextInput = prompt => {
     return <>
         <input type={isPreview ? 'text' : 'password'}/>
         <button onMouseDown={showPreview} onMouseUp={hidePreview}>
-            {isPreview === 'password' ? '👁' : '👁‍🗨'}
+            {isPreview ? '👁‍🗨' : '👁' }
         </button>
         </>
 }
