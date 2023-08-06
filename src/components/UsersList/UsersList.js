@@ -1,5 +1,5 @@
 import React from "react";
 
-const UsersList = props =>{
+export const UsersList = props =>{
 
 }

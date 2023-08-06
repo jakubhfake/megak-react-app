@@ -1,12 +1,9 @@
 import React from 'react';
 import './App.css';
-import {PassTextInput} from "../PassTextInput/PassTextInput";
-import {LedLight} from "../LedLight/LedLight";
+import {data} from '../../data/data.json';
+import {UsersList} from '../UsersList/UsersList';
 
-export const App = props => (
-    <>
-           <PassTextInput/>
-            <LedLight/>
-    </>
-);
+export const App = props => {
+    return <UsersList users={data}/>
+};
 
