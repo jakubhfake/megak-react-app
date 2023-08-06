@@ -1,13 +1,10 @@
 import React from "react";
+import {UserListOneItem} from './UserListOneItem';
 
 export const UsersList = props => (
     <ul>
         {
-            props.users.map(
-                user => <li key={user.username}>
-                    {user.name} {user.last_name}  {user.username}
-            </li>
-            )
+            props.users.map(userObj => <UserListOneItem user={userObj} key={userObj.username}/>)
         }
     </ul>
 )
