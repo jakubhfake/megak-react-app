@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ProgressBar} from "./ProgressBar";
+import {ProgressBar} from "../ProgressBar/ProgressBar";
 
 export const AnimatedProgressBar = props => {
     const [percentage, setPercentage] = useState(0);

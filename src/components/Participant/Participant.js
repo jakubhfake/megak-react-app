@@ -1,7 +1,7 @@
 import React from 'react';
-import {StringList} from "./StringList";
-import {RecordCount} from "./RecordsCount";
-import {Counter} from "./Counter";
+import {StringList} from "./components/StringList/StringList";
+import {RecordCount} from "./components/RecordsCount/RecordsCount";
+import {Counter} from "./components/Counter/Counter";
 
 export const Participant = (props) => {
     const names = props.list

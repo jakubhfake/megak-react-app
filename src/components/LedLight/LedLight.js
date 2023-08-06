@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-import './LedLights.css';
-export const LedLights = props => {
+import './LedLight.css';
+export const LedLight = props => {
     const [color, setColor] = useState('white');
 
     return <>
