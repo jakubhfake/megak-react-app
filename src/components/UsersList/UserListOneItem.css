@@ -1,7 +1,34 @@
+.UserListOneItem {
+    padding: 10px 15px;
+    display: flex;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.UserListOneItem:hover {
+    background-color: lightgray;
+}
+
 .UserListOneItem__photo {
     width: 50px;
     height: 50px;
     vertical-align: middle;
     margin-right: 10px;
     border-radius: 50%;
+}
+
+.UserListOneItem__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.UserListOneItem__text p {
+    margin: 0px;
+}
+
+.UserListOneItem__username {
+    font-size: 75%;
+    color: lightslategrey;
+
 }

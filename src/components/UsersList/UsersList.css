@@ -1,3 +1,4 @@
 .UsersList {
-
+    list-style: none;
+    border: #efefef 1px solid;
 }
