@@ -9,7 +9,11 @@ export const SelectGender = props => {
     };
 
     return <form onSubmit={sendForm}>
-        <select name={"gender"}>
+        <select
+            name={"gender"}
+            value={gender}
+            onChange={e => setGender(e.target.value)}
+        >
             <option value={""}>-select-</option>
             <option value={"W"}>Woman</option>
             <option value={"M"}>Men</option>
