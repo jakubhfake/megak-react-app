@@ -9,7 +9,8 @@ export const ControlledForm = props => {
 
     const color = nick[0] === '@' ? 'green' : 'red';
     const sendForm = e => {
-      console.log(nick);
+        e.preventDefault();
+        console.log(nick);
     };
 
     return <form onSubmit={sendForm}>
