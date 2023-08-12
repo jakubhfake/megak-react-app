@@ -15,16 +15,21 @@ export const ControlledForm = props => {
 
     return <form onSubmit={sendForm}>
         <h1>Hello, {nick}.</h1>
-        <textarea
-               name={"nick"}
-               value={nick} onChange={putNick}
-        />
-        <input type={'text'}
-               name={"nick"}
-               value={nick} onChange={putNick}
-               style={{backgroundColor: color}}
-        />
-        <p>You've entered {nick.length} characters nick.</p>
-        <button type={"submit"}>Save</button>
+        <div>
+            <textarea
+                name={"nick"}
+                value={nick} onChange={putNick}
+            />
+        </div>
+        <div>
+            <input type={'text'}
+                   name={"nick"}
+                   value={nick} onChange={putNick}
+                   style={{backgroundColor: color}}
+            />
+            <p>You've entered {nick.length} characters nick.</p>
+            <button type={"submit"}>Save</button>
+        </div>
+
     </form>
 };
