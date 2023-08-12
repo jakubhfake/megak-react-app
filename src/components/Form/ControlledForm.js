@@ -13,7 +13,8 @@ export const ControlledForm = props => {
         <h1>Hello, {nick}.</h1>
         <input type={'text'}
                value={nick} onChange={putNick}
-               style={{backgroundColor: `${color}`}}
+               style={{backgroundColor: color}}
         />;
+        <p>You've entered {nick.length} characters nick.</p>
     </>
 };
