@@ -15,6 +15,10 @@ export const ControlledForm = props => {
 
     return <form onSubmit={sendForm}>
         <h1>Hello, {nick}.</h1>
+        <textarea
+               name={"nick"}
+               value={nick} onChange={putNick}
+        />
         <input type={'text'}
                name={"nick"}
                value={nick} onChange={putNick}
