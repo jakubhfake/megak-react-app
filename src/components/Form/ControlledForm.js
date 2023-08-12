@@ -7,9 +7,13 @@ export const ControlledForm = props => {
       setNick(e.target.value);
     };
 
+    const color = nick[0] === '@' ? 'green' : 'red';
+
     return <>
         <h1>Hello, {nick}.</h1>
-        <input type={'text'} value={nick} onChange={putNick}
+        <input type={'text'}
+               value={nick} onChange={putNick}
+               style={{backgroundColor: `${color}`}}
         />;
     </>
 };
