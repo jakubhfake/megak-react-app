@@ -8,8 +8,11 @@ export const ControlledForm = props => {
     };
 
     const color = nick[0] === '@' ? 'green' : 'red';
+    const sendForm = e => {
+      console.log(nick);
+    };
 
-    return <form method={"POST"}>
+    return <form onSubmit={sendForm}>
         <h1>Hello, {nick}.</h1>
         <input type={'text'}
                name={"nick"}
