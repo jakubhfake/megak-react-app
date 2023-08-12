@@ -7,5 +7,9 @@ export const ControlledForm = props => {
       setNick(e.target.value);
     };
 
-    return <input type={'text'} value={nick} onChange={putNick}/>;
+    return <>
+        <h1>Hello, {nick}.</h1>
+        <input type={'text'} value={nick} onChange={putNick}
+        />;
+    </>
 };
