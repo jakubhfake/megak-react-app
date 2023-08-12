@@ -9,12 +9,14 @@ export const ControlledForm = props => {
 
     const color = nick[0] === '@' ? 'green' : 'red';
 
-    return <>
+    return <form method={"POST"}>
         <h1>Hello, {nick}.</h1>
         <input type={'text'}
+               name={"nick"}
                value={nick} onChange={putNick}
                style={{backgroundColor: color}}
-        />;
+        />
         <p>You've entered {nick.length} characters nick.</p>
-    </>
+        <button type={"submit"}>Save</button>
+    </form>
 };
