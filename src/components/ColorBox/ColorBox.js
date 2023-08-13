@@ -20,7 +20,7 @@ export const ColorBox = props => {
         </div>
         <div>
             <input
-                type="text"
+                type="color"
                 value={backgroundColor}
                 onChange={e => setBackgroundColor(e.target.value)}
             />
