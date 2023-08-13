@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 export const ControlledForm = props => {
-    const [nick, setNick] = useState('')
+    const [nick, setNick] = useState('unnamed')
 
     const putNick = e => {
       setNick(e.target.value);
@@ -14,7 +14,7 @@ export const ControlledForm = props => {
     };
 
     return <form onSubmit={sendForm}>
-        <h1>Hello, {nick}.</h1>
+        <h1>Hello from {nick}.</h1>
         <div>
             <textarea
                 name={"nick"}

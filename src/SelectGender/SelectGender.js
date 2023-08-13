@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 export const SelectGender = props => {
-    const [gender, setGender] = useState('');
+    const [gender, setGender] = useState('M');
 
     const sendForm = e => {
         e.preventDefault();
@@ -16,7 +16,7 @@ export const SelectGender = props => {
         >
             <option value={""}>-select-</option>
             <option value={"W"}>Woman</option>
-            <option value={"M"}>Men</option>
+            <option value={"M"}>Man</option>
         </select>
         <p>Please select yours gender.</p>
     </form>
