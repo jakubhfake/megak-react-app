@@ -3,26 +3,54 @@ import React, {useState} from "react";
 export const NewUserForm = props => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [age, setAge] = useState('');
+    const [age, setAge] = useState(0);
 
-    return <form>
+    const sendForm = e => {
+        e.preventDefault();
+
+        const person = {
+            firstName,
+            lastName,
+            age,
+        };
+
+        console.log(person);
+    }
+
+    return <form onSubmit={sendForm}>
         <p>
             <label>
                 Imię:<br/>
-                <input type="text"/>
+                <input
+                    type="text"
+                    value={firstName}
+                    onChange={e => setFirstName(e.target.value)}
+                />
             </label>
         </p>
         <p>
             <label>
                 Nazwisko:<br/>
-                <input type="text"/>
+                <input
+                    type="text"
+                    value={lastName}
+                    onChange={e => setLastName(e.target.value)}
+                />
             </label>
         </p>
         <p>
             <label>
                 Wiek:<br/>
-                <input type="number" min={0}/>
+                <input
+                    type={"number"}
+                    value={age}
+                    onChange={e => setAge(Number(e.target.value))}
+                    min={0}
+                />
             </label>
+        </p>
+        <p>
+            <button type={"submit"}>Wyślij</button>
         </p>
     </form>
 };
