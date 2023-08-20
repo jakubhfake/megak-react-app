@@ -12,6 +12,11 @@ export const NewUserForm = props => {
         console.log(person);
     }
 
+    const change = e => setPerson(person => ({
+        ...person,
+        [e.target.name]: e.target.value,
+    }))
+
     return <form onSubmit={sendForm}>
         <p>
             <label>
@@ -19,10 +24,8 @@ export const NewUserForm = props => {
                 <input
                     type="text"
                     value={person.firstName}
-                    onChange={e => setPerson(person => ({
-                        ...person,
-                        firstName: e.target.value,
-                    }))}
+                    name={"firstName"}
+                    onChange={change}
                 />
             </label>
         </p>
@@ -32,10 +35,8 @@ export const NewUserForm = props => {
                 <input
                     type="text"
                     value={person.lastName}
-                    onChange={e => setPerson(person => ({
-                        ...person,
-                        lastName: e.target.value,
-                    }))}
+                    name={"lastName"}
+                    onChange={change}
                 />
             </label>
         </p>
@@ -45,10 +46,8 @@ export const NewUserForm = props => {
                 <input
                     type={"number"}
                     value={person.age}
-                    onChange={e => setPerson(person => ({
-                        ...person,
-                        age: Number(e.target.value),
-                    }))}
+                    name={"age"}
+                    onChange={change}
                     min={0}
                 />
             </label>
