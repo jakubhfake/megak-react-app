@@ -1,10 +1,20 @@
 import React from 'react';
 import './App.css';
-import {NewUserForm} from "../NewUserForm/NewUserForm";
+import {Dialog} from "../common/Dialog";
 
 export const App = props => {
     return <>
-        <NewUserForm/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet corporis cumque dolores esse expedita
+            facere hic illum minus nisi pariatur praesentium quasi quis quo, reiciendis repudiandae voluptas
+            voluptate.</p>
+        <Dialog/>
+        <p>Aliquid cupiditate delectus dignissimos, doloremque, explicabo hic laudantium
+        necessitatibus nesciunt nulla odit optio qui quia quisquam rerum tempore. Iusto labore nihil possimus! Ab
+        accusantium nesciunt quis totam veritatis? Eligendi, fuga?</p><p>Dolor enim illum, labore laborum molestiae
+        molestias praesentium? A accusantium cupiditate dicta esse et ex expedita incidunt maxime nemo neque,
+        perferendis quibusdam recusandae similique sit soluta suscipit ullam voluptatibus voluptatum.</p><p>Accusamus
+        adipisci aspernatur, assumenda blanditiis cupiditate debitis dignissimos doloremque eos exercitationem fuga
+        fugit id illum in ipsa laudantium odio porro quia quis quisquam quo quos rem sed sit tenetur vel?</p>
     </>
 
 };
