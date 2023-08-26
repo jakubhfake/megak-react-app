@@ -7,7 +7,12 @@ export const App = props => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet corporis cumque dolores esse expedita
             facere hic illum minus nisi pariatur praesentium quasi quis quo, reiciendis repudiandae voluptas
             voluptate.</p>
-        <Dialog/>
+        <Dialog body={<>
+            <h1>Tytuł okna</h1>
+                <p>Opis 1</p>
+                <p>Opis 2</p>
+        </>}/>
+        <Dialog body={"Kolejny dialog"}/>
         <p>Aliquid cupiditate delectus dignissimos, doloremque, explicabo hic laudantium
         necessitatibus nesciunt nulla odit optio qui quia quisquam rerum tempore. Iusto labore nihil possimus! Ab
         accusantium nesciunt quis totam veritatis? Eligendi, fuga?</p><p>Dolor enim illum, labore laborum molestiae

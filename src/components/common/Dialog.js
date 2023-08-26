@@ -4,6 +4,6 @@ import './Dialog.css';
 
 export const Dialog = props => (
     <div className={"Dialog__container"}>
-        Test...
+        {props.body}
     </div>
 );
