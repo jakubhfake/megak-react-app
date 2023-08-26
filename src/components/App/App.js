@@ -12,7 +12,9 @@ export const App = props => {
             <p>Opis 1</p>
             <p>Opis 2</p>
         </Dialog>
-        <Dialog body={"Kolejny dialog"}/>
+        <Dialog>
+            Kolejny dialog
+        </Dialog>
         <p>Aliquid cupiditate delectus dignissimos, doloremque, explicabo hic laudantium
         necessitatibus nesciunt nulla odit optio qui quia quisquam rerum tempore. Iusto labore nihil possimus! Ab
         accusantium nesciunt quis totam veritatis? Eligendi, fuga?</p><p>Dolor enim illum, labore laborum molestiae
