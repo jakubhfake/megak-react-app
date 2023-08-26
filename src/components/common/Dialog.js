@@ -4,10 +4,12 @@ import './Dialog.css';
 
 export const Dialog = props => (
     <div className={"Dialog__container"}>
-        <div className={"Dialog__title"}>
-            Tytuł...
+        {
+            props.title && <div className={"Dialog__title"}>
+            {props.title}
         </div>
-        <div className={"Dalog__content"}>
+        }
+        <div className={"Dialog__content"}>
             {props.children}
         </div>
     </div>
