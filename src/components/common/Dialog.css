@@ -5,5 +5,16 @@
     border: 1px solid #efefef;
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    padding: 15px;
+    /*padding: 15px;*/
+}
+
+.Dialog__title {
+    padding: 5px 15px;
+    background-color: #efefef;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.Dalog__content {
+    padding: 5px 15px 15px;
 }
