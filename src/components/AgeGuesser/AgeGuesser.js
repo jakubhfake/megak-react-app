@@ -9,14 +9,14 @@ export const AgeGuesser = prompt => {
     const fetchData = useCallback(async () => {
         try {
             setError(null);
-            const res = await fetch('https://api.agify.io/?namerrr=Kunegunda');
+            const res = await fetch('https://api.agify.io/?name=Kunegunda');
             console.log(res);
             const data = await res.json();
             // console.log(data);
             setAge(data.age);
             console.log('setAge', setAge(data.age), typeof data.age);
         }
-        // catch nie wykrywa błędu 4
+        // catch nie wykrywa błędu, dokończyć waliację
         catch (err) {
             setError('Błąd wczytywania!');
 
