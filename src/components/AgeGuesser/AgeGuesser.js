@@ -1,43 +1,7 @@
 import React, {useEffect, useState, useCallback} from "react";
+import {AgeGuesserAnswer} from "./AgeGuesserAnswer";
 
-export const AgeGuesser = prompt => {
-    const [age, setAge] = useState(null);
-    const [error, setError] = useState(null)
+export const AgeGuesser = props => {
 
-    // ToDo check error handling
-
-    const fetchData = useCallback(async () => {
-        try {
-            setError(null);
-            const res = await fetch('https://api.agify.io/?name=Kunegunda');
-            console.log(res);
-            const data = await res.json();
-            // console.log(data);
-            setAge(data.age);
-            console.log('setAge', setAge(data.age), typeof data.age);
-        }
-        // catch nie wykrywa błędu, dokończyć waliację
-        catch (err) {
-            setError('Błąd wczytywania!');
-
-        }
-    }, []);
-
-    useEffect( () => {
-        fetchData();
-    }, []);
-
-    console.log('Error', error);
-    if (error) {
-        return <p>{error}</p>;
-    }
-
-    if (age === null) {
-        return <p> Wczytywanie....</p>;
-    }
-
-    return <>
-        <p>Twój wiek: {age}</p>
-        <p>Twoja data urodzenia: {new Date().getFullYear() - age}</p>
-    </>
+    return <AgeGuesserAnswer name={"Wojciech"}/>
 };
