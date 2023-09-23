@@ -5,18 +5,32 @@ export const AgeGuesserAnswer = props => {
 
     // ToDo check error handling
 
-    const fetchData = useCallback(async () => {
-
-            const res = await fetch(`https://api.agify.io/?name=${props.name}`);
-            console.log('Response', res);
-                const data = await res.json();
-                setAge(data.age);
-
-    }, []);
+    // const fetchData = useCallback(async () => {
+    //
+    //         const res = await fetch(`https://api.agify.io/?name=${props.name}`);
+    //         console.log('Response', res);
+    //             const data = await res.json();
+    //             setAge(data.age);
+    //
+    // }, []);
+    //
+    // useEffect( () => {
+    //     fetchData();
+    // }, []);
+    const [error, setError] = useState(null);
 
     useEffect( () => {
-        fetchData();
+        (async () => {
+            const res = await fetch(`https://api.agify.io/?namesss=${props.name}`);
+            console.log('Response', res);
+            const data = await res.json();
+            setAge(data.age);
+        })();
     }, []);
+
+    if(error) {
+        return <p>{error}</p>
+    }
 
     if (age === null) {
         return <p> Wczytywanie....</p>;
